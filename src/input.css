@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+.paint-brush,
+.pen,
+.eraser,
+.palette{
+    cursor: pointer;
+    @apply flex justify-center items-center gap-1
+}
+

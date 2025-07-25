@@ -7,11 +7,45 @@
     <title>Painter</title>
     <link href="./src/output.css" rel="stylesheet">
     <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="min-h-screen w-full">
-    
+<body class="min-h-screen w-full bg-[#ECE8E8] p-5">
 
+    <div class="tools flex gap-10 bg-white justify-center w-[500px] mx-auto rounded-2xl py-2 shadow">
+        <div class="paint-brush" id="paint-brush">
+            <i class="fa-solid fa-paintbrush"></i>
+            <span>Paintbrush</span>
+        </div>
+        <div class="pen" id="pen">
+            <i class="fa-solid fa-pen"></i>
+            <span>Pen</span>
+        </div>
+        <div class="eraser" id="eraser">
+            <i class="fa-solid fa-eraser"></i>
+            <span>Eraser</span>
+        </div>
+        <div class="palette" id="palette">
+            <i class="fa-solid fa-palette"></i>
+            <label class="cursor-pointer" for="colorPicker">Palette</label>
+            <input class="cursor-pointer" type="color" id="colorPicker" name="colorPicker" value="#ff0000">
+        </div>
+    </div>
+
+    <div class="wrapper relative w-full mt-10">
+        
+        <div class="speed absolute top-10 left-10">
+            <div class="speed-bar">1x</div>
+        </div>
+            
+        <div class="bg-white w-4/5 h-[600px] mx-auto rounded shadow shadow-yellow-100">
+            <canvas>
+
+            </canvas>
+        </div>
+    </div>
 
     <script src="./main.js"></script>
 </body>
